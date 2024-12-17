@@ -70,6 +70,6 @@ func Worker(wg *sync.WaitGroup, reqChan chan Request, resChan chan Response) {
 		}
 
 		resChan <- Response{StatusCode: res.StatusCode}
-		defer res.Body.Close()
+		res.Body.Close()
 	}
 }
