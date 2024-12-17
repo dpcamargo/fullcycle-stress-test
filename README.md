@@ -5,6 +5,7 @@ Criar um sistema CLI em Go para realizar testes de carga em um serviço web. O u
 O sistema deverá gerar um relatório com informações específicas após a execução dos testes.
 
 Entrada de Parâmetros via CLI:
+
 - --url: URL do serviço a ser testado.
 - --requests: Número total de requests.
 - --concurrency: Número de chamadas simultâneas.
@@ -12,6 +13,7 @@ Entrada de Parâmetros via CLI:
 ---
 
 Execução do Teste:
+
 - Realizar requests HTTP para a URL especificada.
 - Distribuir os requests de acordo com o nível de concorrência definido.
 - Garantir que o número total de requests seja cumprido.
@@ -20,6 +22,7 @@ Execução do Teste:
 ---
 
 Apresentar um relatório ao final dos testes contendo:
+
 - Tempo total gasto na execução
 - Quantidade total de requests realizados.
 - Quantidade de requests com status HTTP 200.
@@ -29,3 +32,8 @@ Apresentar um relatório ao final dos testes contendo:
 - docker run <sua imagem docker> —url=http://google.com —requests=1000 —concurrency=10
 
 ---
+
+## Execução
+
+`docker build -t stress-test .`
+`docker run stress-test -u http://www.google.com.br -r 1000 -c 5`
