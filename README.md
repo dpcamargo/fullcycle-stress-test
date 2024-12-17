@@ -36,4 +36,4 @@ Apresentar um relatório ao final dos testes contendo:
 ## Execução
 
 `docker build -t stress-test .`
-`docker run stress-test -u http://www.google.com.br -r 1000 -c 5`
+`docker run stress-test -u http://www.google.com.br -r 1000 -c 50`
